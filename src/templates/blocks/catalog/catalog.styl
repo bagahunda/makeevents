@@ -225,6 +225,40 @@ aside
   color #258cd5
   text-decoration none
 
+.pagination
+  display table
+  width 100%
+  vertical-align middle
+
+  &__links
+    display inline-block
+    margin 0
+    padding 0
+    font-size 0
+    list-style none
+    border-radius 3px
+    border solid 1px #d2d3d5
+
+    li
+      display inline-block
+
+      &:not(:last-child)
+        border-right solid 1px #d2d3d5
+
+
+  &__item
+    display inline-block
+    padding 0.625em 1.25em
+    font-size 1rem
+    text-decoration none
+    color text-color-base
+
+.items-qty
+  display table-cell
+
+  span
+    margin-right 1.25em
+
 .disclaimer
   padding 2.142em 0 2.857em
   font-size 0.875rem
