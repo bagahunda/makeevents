@@ -1,15 +1,15 @@
 include ../card/card
 
-mixin catalog()
+mixin catalog-places()
   .container
     +b('section').catalog
       +e.header.clearfix
         +e.title
-          h1 ДОСТУПНЫЕ АРТИСТЫ
+          h1 ДОСТУПНЫЕ площадки
           span 1245 предложений
 
         +e.search
-          input.form-control(type="text" placeholder="Например, Сергей Лазарев…")
+          input.form-control(type="text" placeholder="Например, Олимпийский…")
           button.btn.btn--search(type="button") Найти
 
       +e.content.clearfix
@@ -37,37 +37,53 @@ mixin catalog()
 
           +e('ul').items-filters
             +b('li').item-filter
-              +e('span').name.js-show-inner-filter Амплуа и жанр артиста
+              +e('span').name.js-show-inner-filter Тип Площадки
               +b('ul').inner-filter
                 +e('li').item
-                  input(type="checkbox" id="mc" name="mc")
-                  label(for="mc") Ведущий
-                  +b('ul').inner-subfilter
-                    +e('li')
-                      input(type="checkbox" id="humor" name="humor")
-                      label(for="humor") Юмор и стендап
-                    +e('li')
-                      input(type="checkbox" id="musician" name="musician")
-                      label(for="musician") Музыкант
-                    +e('li')
-                      input(type="checkbox" id="theme" name="theme")
-                      label(for="theme") Тематический
+                  input(type="radio" id="open" name="placeType")
+                  label(for="open") Открытый
                 +e('li').item
-                  input(type="checkbox" id="music" name="music")
-                  label(for="music") Музыкант
-                  +b('ul').inner-subfilter
-                    +e('li')
-                      input(type="checkbox" id="instrumenetal" name="instrumenetal")
-                      label(for="instrumenetal") Инструментальная музыка
-                    +e('li')
-                      input(type="checkbox" id="group" name="group")
-                      label(for="group") Группа/ВИА
+                  input(type="radio" id="closed" name="placeType")
+                  label(for="closed") Закрытый
                 +e('li').item
-                  input(type="checkbox" id="orchestra" name="orchestra")
-                  label(for="orchestra") Оркестр
+                  input(type="radio" id="dontCare" name="placeType")
+                  label(for="dontCare") Неважно
+            +b('li').item-filter
+              +e('span').name.js-show-inner-filter Формат Площадки
+              +b('ul').inner-filter
                 +e('li').item
-                  input(type="checkbox" id="dj" name="dj")
-                  label(for="dj") DJ
+                  input(type="checkbox" id="rest" name="rest")
+                  label(for="rest") Ресторан
+                +e('li').item
+                  input(type="checkbox" id="bar" name="bar")
+                  label(for="bar") Бар
+                +e('li').item
+                  input(type="checkbox" id="cafe" name="cafe")
+                  label(for="cafe") Кафе
+                +e('li').item
+                  input(type="checkbox" id="loft" name="loft")
+                  label(for="loft") Лофт
+                +e('li').item
+                  input(type="checkbox" id="concertHall" name="concertHall")
+                  label(for="concertHall") Выставочный зал
+                +e('li').item
+                  input(type="checkbox" id="concertHall" name="concertHall")
+                  label(for="concertHall") Концертный зал
+                +e('li').item
+                  input(type="checkbox" id="stadium" name="stadium")
+                  label(for="stadium") Стадион
+            +b('li').item-filter
+              input(type="checkbox" id="smoke" name="smoke")
+              label(for="smoke") Зона для курения
+            +b('li').item-filter
+              input(type="checkbox" id="parking" name="parking")
+              label(for="parking") Парковка
+            +b('li').item-filter
+              input(type="checkbox" id="makeup" name="makeup")
+              label(for="makeup") Гримёрные
+            +b('li').item-filter
+              input(type="checkbox" id="internet" name="internet")
+              label(for="internet") Интернет
             +b('li').item-filter
               +e('span').name.js-show-inner-filter Рейтинг
               +b('ul').inner-filter
@@ -98,17 +114,17 @@ mixin catalog()
         .main-content
           +b('ul').card-grid
             +e('li').item
-              +card('Дуэт КП', 'Ведущий', '15000')
+              +card('Exposed', 'Лофт', '15000')
             +e('li').item
-              +card('Вадим Ждан', 'Ведущий', '150000')
+              +card('Xaletsky Club', 'Бар, ресторан, кафе', '150000')
             +e('li').item
-              +card('Максим Крицкий', 'Ведущий', '15000')
+              +card('Ray Just Arena', 'Концертный зал, стадион, спортивная площадка, Концертный зал, стадион, спортивная площадка', '15000')
             +e('li').item
-              +card('Артём Хворостухин', 'Ведущий, вокальный исполнитель', '15000')
+              +card('Королевский', 'Лофт', '15000')
             +e('li').item
-              +card('Олег Белецкий', 'Ведущий', '15000')
+              +card('Loft #1 The Event Hall', 'Лофт', '15000')
             +e('li').item
-              +card('Елена Голуб', 'Шоу и развлечения', '15000')
+              +card('МИР', 'Концертный зал', '15000')
 
     +b.disclaimer.u-text-center
       p Данные, использованные на сайте, включая стоимость билетов, а также расписание самолетов, поездов и электропоездов, взяты из официальных источников. Заказы ж/д билетов и авиабилетов, включая электронные жд билеты, оформляются партнерами Туту.ру. Стоимость указана с учетом сервисного сбора Туту.ру. Окончательную сумму можно увидеть на шаге подтверждения заказа. Ж/д, авиабилеты и туры найдены с помощью КТИС (Сколково).
