@@ -1,0 +1,44 @@
+.header
+  padding 1.68em 0
+
+  background #000000
+
+.logo
+  float left
+  padding-left 1.875em
+  use
+    fill #ffffff
+
+.main-nav
+  position relative
+  top 4px
+  float left
+  margin 0
+  padding 0 0 0 10.75em
+  list-style none
+
+  li
+    display inline-block
+
+  &__link
+    padding 0 15px
+    position relative
+
+    font-family heading-font
+
+    color #ffffff
+    text-transform uppercase
+    text-decoration none
+
+    &:after
+      width calc(100% - 30px)
+      height 1px
+      position absolute
+      left 15px
+      bottom -3px
+
+      background #4F4F4F
+      content ''
+
+    &:hover:after
+      display none

@@ -1,0 +1,223 @@
+.catalog
+  padding 1.875em 1.875em 3.75em
+  margin-top 1.875em
+  border-radius 3px
+  background-color #fdfdfd
+  box-shadow 0 0.625em 1.875em 0 rgba(0, 0, 0, 0.1)
+
+  &__header
+    margin-bottom 1.875em
+
+  &__title
+    float left
+    h1
+      margin 0
+    span
+      color text-color-grey
+
+  &__search
+    position relative
+    float right
+    width 100%
+    max-width 498px
+
+    .btn--search
+      position absolute
+      top 0
+      right 0
+
+  &__main-filter
+    padding 1.25em 0.93em 1.875em
+    border-radius 2px
+    background-color #f3f1ed
+    border solid 1px #e6e6e6
+
+    label
+      display block
+      margin-bottom 0.625em
+      font-size 0.81rem
+      opacity 0.6
+
+  &__items-filters
+    margin 0.625em 0 1.31em
+    padding 0
+    border-radius 2px
+    background-color #ffffff
+    border solid 1px #efefef
+    list-style none
+
+.item-filter
+  padding 1.06em
+
+  &:not(:last-child)
+    border-bottom solid 1px #efefef
+
+  &__name
+    position relative
+    padding-left 1.43em
+    font-size 0.875em
+    cursor pointer
+
+    &:before
+      width 6px
+      height 6px
+      margin-top -7px
+      position absolute
+      left 0
+      top 50%
+      border-left 1px solid text-color-base
+      border-top 1px solid text-color-base
+      transform rotate(-135deg)
+      content ''
+
+.inner-filter
+  margin 1.25em 0 0
+  padding 0
+  display none
+  list-style none
+
+  &__item
+    font-size 0.81em
+
+    &:not(:last-child)
+      margin-bottom 1.07em
+
+    input[type="checkbox"]
+      display none
+
+      & + label
+        padding-left 2em
+        position relative
+
+        &:before
+          margin-top -3px
+          width 16px
+          height 16px
+          position absolute
+          left 0
+          top 0
+          background-color color-blue
+          border-radius 2px
+          content ''
+
+        &:after
+          width 12px
+          height 7px
+          position absolute
+          left 2px
+          top -1px
+          border-left 2px solid #ffffff
+          border-bottom 2px solid #ffffff
+          transform rotate(-45deg)
+          opacity 0
+          transition all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+          content ''
+
+      &:checked + label:after
+        opacity 1
+
+    input[type="radio"]
+      display none
+
+      & + label
+        padding-left 2em
+        position relative
+
+        &:before
+          margin-top -3px
+          width 16px
+          height 16px
+          position absolute
+          left 0
+          top 0
+          background-color #ffffff
+          box-shadow inset 0 1px 3px 0 #e8e9ea
+          border solid 1px #d3d4d5
+          border-radius 50%
+          transition all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+          content ''
+
+        &:after
+          width 6px
+          height 6px
+          position absolute
+          left 5px
+          top 2px
+          border-radius 50%
+          background-color #ffffff
+          opacity 0
+          transition all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+          content ''
+
+      &:checked + label:before
+        border none
+        background-color color-blue
+        box-shadow none
+
+      &:checked + label:after
+        opacity 1
+
+.inner-subfilter
+  margin 1.07em 0 0
+  padding 0 0 0 1.07em
+  list-style none
+
+  li:not(:last-child)
+    margin-bottom 1.07em
+
+aside
+  width 25%
+  float left
+
+  @media screen and (max-width: 1090px)
+    width calc(40% - 30px)
+
+.form-group:not(:first-child)
+  margin-top 1.25em
+
+.main-content
+  width calc(75% - 30px)
+  float right
+
+  @media screen and (max-width: 1090px)
+    width 60%
+
+.card-grid
+  margin 0
+  padding 0
+  list-style none
+  font-family monospace /* for spacing columns correctly */
+  letter-spacing -.65em /* this too */
+  margin-left -0.93em
+  margin-right -0.93em
+  text-align left /* center or justify for columns in last row */
+  display block
+
+  &__item
+    margin-bottom 1.875em
+    width 33.3333333333%
+    font-family base-font /* be sure to reset the font and letter-spacing */
+    letter-spacing normal
+    display inline-block
+    padding-left 0.93em
+    padding-right 0.93em
+    position relative
+    float none
+    text-align left
+    vertical-align top /* align row's columns top or baseline */
+
+    @media screen and (max-width: 1090px)
+      width 50%
+
+    @media screen and (max-width: 850px)
+      width 100%
+
+.reset-filter
+  display inline-block
+  margin 0 auto
+  font-size 0.93em
+  color #258cd5
+  text-decoration none
+
+
+

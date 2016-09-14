@@ -1,0 +1,113 @@
+include ../card/card
+
+mixin catalog()
+  .container
+    +b('section').catalog
+      +e.header.clearfix
+        +e.title
+          h1 ДОСТУПНЫЕ АРТИСТЫ
+          span 1245 предложений
+
+        +e.search
+          input.form-control(type="text" placeholder="Например, Сергей Лазарев…")
+          button.btn.btn--search(type="button") Найти
+
+      +e.content.clearfix
+        aside
+          +e.main-filter
+            .form-group
+              label() Город
+              select#city(name="city")
+                option(value="moscow") Москва
+                option(value="spb") Санкт-Петербург
+            .form-group
+              label() Начало мероприятия
+              input.form-control.form-control--filter(type="text")
+            .form-group
+              label() Конец мероприятия
+              input.form-control.form-control--filter(type="text")
+            .form-group
+              label() Количество гостей
+              input.form-control.form-control--filter(type="number")
+            .form-group
+              label() Формат мероприятия
+              select#format(name="format")
+                option(value="corp") Корпоратив
+                option(value="conf") Конференция
+
+          +e('ul').items-filters
+            +b('li').item-filter
+              +e('span').name.js-show-inner-filter Амплуа и жанр артиста
+              +b('ul').inner-filter
+                +e('li').item
+                  input(type="checkbox" id="mc" name="mc")
+                  label(for="mc") Ведущий
+                  +b('ul').inner-subfilter
+                    +e('li')
+                      input(type="checkbox" id="humor" name="humor")
+                      label(for="humor") Юмор и стендап
+                    +e('li')
+                      input(type="checkbox" id="musician" name="musician")
+                      label(for="musician") Музыкант
+                    +e('li')
+                      input(type="checkbox" id="theme" name="theme")
+                      label(for="theme") Тематический
+                +e('li').item
+                  input(type="checkbox" id="music" name="music")
+                  label(for="music") Музыкант
+                  +b('ul').inner-subfilter
+                    +e('li')
+                      input(type="checkbox" id="instrumenetal" name="instrumenetal")
+                      label(for="instrumenetal") Инструментальная музыка
+                    +e('li')
+                      input(type="checkbox" id="group" name="group")
+                      label(for="group") Группа/ВИА
+                +e('li').item
+                  input(type="checkbox" id="orchestra" name="orchestra")
+                  label(for="orchestra") Оркестр
+                +e('li').item
+                  input(type="checkbox" id="dj" name="dj")
+                  label(for="dj") DJ
+            +b('li').item-filter
+              +e('span').name.js-show-inner-filter Рейтинг
+              +b('ul').inner-filter
+                +e('li').item
+                  input(type="radio" id="rate1" name="rating")
+                  label(for="rate1") 1
+                +e('li').item
+                  input(type="radio" id="rate2" name="rating")
+                  label(for="rate2") 2
+                +e('li').item
+                  input(type="radio" id="rate3" name="rating")
+                  label(for="rate3") 3
+                +e('li').item
+                  input(type="radio" id="rate4" name="rating")
+                  label(for="rate4") 4
+                +e('li').item
+                  input(type="radio" id="rate5" name="rating")
+                  label(for="rate5") 5
+            +b('li').item-filter
+              +e('span').name.js-show-inner-filter Цена
+              +b.inner-filter
+                input.form-control.form-control--filter.form-control--inline.form-control--half(type="text" placeholder="От")
+                input.form-control.form-control--filter.form-control--inline.form-control--half(type="text" placeholder="До")
+
+          .u-text-center
+            a.reset-filter(href="#") Сбросить фильтр
+
+        .main-content
+          +b('ul').card-grid
+            +e('li').item
+              +card('Дуэт КП', 'Ведущий', '15000')
+            +e('li').item
+              +card('Вадим Ждан', 'Ведущий', '150000')
+            +e('li').item
+              +card('Максим Крицкий', 'Ведущий', '15000')
+            +e('li').item
+              +card('Артём Хворостухин', 'Ведущий, вокальный исполнитель', '15000')
+            +e('li').item
+              +card('Олег Белецкий', 'Ведущий', '15000')
+            +e('li').item
+              +card('Елена Голуб', 'Шоу и развлечения', '15000')
+
+

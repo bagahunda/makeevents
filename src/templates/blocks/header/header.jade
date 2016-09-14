@@ -1,0 +1,17 @@
+mixin header()
+  .svg-sprite
+    include ../sprite/svg.svg
+  +b.header&attributes(attributes)
+    .container.clearfix
+      a.logo(href="/")
+        svg.icon(width="169" height="22")
+          use(xlink:href="#logo")
+      ul.main-nav
+        li
+          a.main-nav__link(href="#") Площадки
+        li
+          a.main-nav__link(href="#") Артисты
+        li
+          a.main-nav__link(href="#") Создать мероприятие
+
+      a.btn.btn--login.u-pull-right(href="#") Войти
