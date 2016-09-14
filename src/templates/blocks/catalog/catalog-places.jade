@@ -126,6 +126,39 @@ mixin catalog-places()
             +e('li').item
               +card('МИР', 'Концертный зал', '15000')
 
+          +b.pagination.clearfix
+            +e('ul').links
+              li
+                a.pagination__item(href="#")
+                  <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+              li
+                a.pagination__item(href="#") 1
+              li
+                a.pagination__item(href="#") 2
+              li
+                a.pagination__item(href="#") 3
+              li
+                a.pagination__item(href="#") 4
+              li
+                a.pagination__item(href="#") 5
+              li
+                a.pagination__item(href="#") ...
+              li
+                a.pagination__item(href="#") 498
+              li
+                a.pagination__item(href="#") 499
+              li
+                a.pagination__item(href="#") 500
+              li
+                a.pagination__item(href="#")
+                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            .items-qty.u-text-right
+              span Выводить по
+              select#itemQty(name="itemQty")
+                option(value="10") 10
+                option(value="50") 50
+                option(value="100") 100
+
     +b.disclaimer.u-text-center
       p Данные, использованные на сайте, включая стоимость билетов, а также расписание самолетов, поездов и электропоездов, взяты из официальных источников. Заказы ж/д билетов и авиабилетов, включая электронные жд билеты, оформляются партнерами Туту.ру. Стоимость указана с учетом сервисного сбора Туту.ру. Окончательную сумму можно увидеть на шаге подтверждения заказа. Ж/д, авиабилеты и туры найдены с помощью КТИС (Сколково).
 
