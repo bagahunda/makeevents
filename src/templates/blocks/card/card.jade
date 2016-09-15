@@ -1,6 +1,6 @@
 mixin card(name, role, price, link)
   +b('article').card
-    a(href="{link}.html")
+    a(href="#{link}.html")
       +e.image
         img(src="https://unsplash.it/270/300?image=1025", alt="")
       +e.info
