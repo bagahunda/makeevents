@@ -8,7 +8,7 @@ mixin artist()
     +b('section').catalog.artist-profile
       +e.header.clearfix
         +card-header('Максим Крицкий', 'Ведущий', '15000', 12)
-        img(src="https://unsplash.it/270/300?image=1025", alt="")
+        img(src="https://unsplash.it/700/300?image=1025", alt="")
 
         ul.photo-tiles
           li 
@@ -25,7 +25,7 @@ mixin artist()
             img(src="https://unsplash.it/270/300?image=1025", alt="")
             .overlay.text-center
               .text +21 фото
-              
+
       +e.content.clearfix
         ul.card-tabs
           li#description.bold-text Описание
@@ -77,7 +77,7 @@ mixin artist()
 
 
           .tab-content#portfolio-block
-            p Выполненные проекты
+            .content-title Выполненные проекты
             +b('ul').portfolio-grid
               +e('li').item
                 +portfolio-item('Вечеринка1', "#")
@@ -92,7 +92,7 @@ mixin artist()
               +e('li').item
                 +portfolio-item('Вечеринка6', "#")
 
-            p Видео
+            .content-title Видео
             +b('ul').portfolio-grid
               +e('li').item
                 +portfolio-item('Вечеринка1 танцы', "#", true)
