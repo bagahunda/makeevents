@@ -9,6 +9,7 @@ color-biege = #f3f1ed
 
 html
   box-sizing border-box
+  height 100%
 
 *,
 *:before,
@@ -16,11 +17,21 @@ html
   box-sizing inherit
 
 body
+  height 100%
   font-family base-font
   color text-color-base
   line-height 1.4
 
   background #F2F2F2
+
+.wrapper
+  min-height 100%
+  margin-bottom -187px
+
+.wrapper:after
+  display block
+  content ""
+  height 187px
 
 .container
   width 100%
@@ -65,6 +76,9 @@ body
 
 .u-text-center
   text-align center
+
+.u-text-right
+  text-align right
 
 .u-text-grey
   color text-color-grey

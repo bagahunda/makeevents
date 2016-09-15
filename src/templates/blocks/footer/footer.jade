@@ -1,2 +1,51 @@
 mixin footer()
   +b.footer&attributes(attributes)
+    .container
+      +e.links.clearfix
+        +e.menu
+          ul
+            li
+              +e('a')(href="#").link-item О компании
+            li
+              +e('a')(href="#").link-item Партнерская программа
+            li
+              +e('a')(href="#").link-item Реклама
+            li
+              +e('a')(href="#").link-item Вакансии
+            li
+              +e('a')(href="#").link-item Помощь
+
+          ul
+            li
+              +e('a')(href="#").link-item
+                <i class="fa fa-vk" aria-hidden="true"></i>
+                | Вконтакте
+            li
+              +e('a')(href="#").link-item
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                | Фейсбук
+            li
+              +e('a')(href="#").link-item
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                | Твиттер
+            li
+              +e('a')(href="#").link-item
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                | Инстаграм
+
+          .lang
+            select#lang(name="lang")
+              option(value="ru") Русский
+              option(value="en") English
+
+        +e.apps.u-text-right
+          a.app-store-link(href="#")
+            img(src="assets/images/appstore.png" height="37" alt="")
+            //- svg.icon(width="125")
+            //-   use(xlink:href="#appstore")
+          a.google-play-link(href="#")
+            img(src="assets/images/googleplay.png" height="37" alt="")
+
+          +e.copy.u-text-right
+            | © 2016, make.events — создание мероприятий без посредников
+
