@@ -1,5 +1,5 @@
 mixin card-header(name, role, price, reviews)
-  a(href="index.html").grey-text Вернуться к результатам поиска
+  a(href="index.html").u-text-grey Вернуться к результатам поиска
   +b.card-header.clearfix
     +e.info
       h1= name
@@ -16,13 +16,13 @@ mixin card-header(name, role, price, reviews)
         li.u-text-grey
           i.fa.fa-star
 
-      a(href="#") #{reviews} отзывов
-      span.grey-text= role
+      a(href="#").u-blue-link #{reviews} отзывов
+      span.u-text-grey= role
 
     +e.price.clearfix
       .price-info
-        span.bold-text от #{price} ₽
-        span.grey-text за программу
+        span.big-bold-text от #{price} ₽
+        span.u-text-grey за программу
 
       button.btn.btn--search(type="button") Забронировать
 

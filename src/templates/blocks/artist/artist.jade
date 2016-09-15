@@ -24,7 +24,7 @@ mixin artist()
             img(src="https://unsplash.it/270/300?image=1025", alt="")
           li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
-            .overlay.text-center
+            .overlay.u-text-center
               .text +21 фото
 
       +e.content.clearfix
@@ -34,12 +34,15 @@ mixin artist()
           li#program.tab-header Программа
           li#reviews.tab-header Отзывы
 
+
         +b.card-tabs-content
           .tab-content#description-block
-            .flex-block
+            .u-flex-block
               +e.text
                 p Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный. Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный.
-                p Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный. Российский певец, актёр театра,
+
+                p  Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный.
+                p Российский певец, актёр театра,
 
                 .content-title Репертуар
 
@@ -48,7 +51,7 @@ mixin artist()
               +e.side-block
 
                 .sidebar-bordered-block
-                  .text-center
+                  .u-text-center
                     .heading-rate
                       span Жанры:
                     p Поп-музыка
@@ -57,7 +60,7 @@ mixin artist()
                     p Рок
 
                 .sidebar-bordered-block
-                  .text-center
+                  .u-text-center
                     .heading-rate
                       span Рейтинг
                     .rate-number 4.2
@@ -80,17 +83,17 @@ mixin artist()
             .content-title Выполненные проекты
             +b('ul').portfolio-grid
               +e('li').item
-                +portfolio-item('Вечеринка1', "#")
+                +portfolio-item('Вечеринка1')
               +e('li').item
-                +portfolio-item('Вечеринка2', "#")
+                +portfolio-item('Вечеринка2')
               +e('li').item
-                +portfolio-item('Вечеринка3', "#")
+                +portfolio-item('Вечеринка3')
               +e('li').item
-                +portfolio-item('Вечеринка4', "#")
+                +portfolio-item('Вечеринка4')
               +e('li').item
-                +portfolio-item('Вечеринка5', "#")
+                +portfolio-item('Вечеринка5')
               +e('li').item
-                +portfolio-item('Вечеринка6', "#")
+                +portfolio-item('Вечеринка6')
 
             .content-title Видео
             +b('ul').portfolio-grid
@@ -117,7 +120,7 @@ mixin artist()
 
           .tab-content#reviews-block
 
-            .flex-block
+            .u-flex-block
               +e.text
 
                 +review-item('Amanda',  '10 апреля 2016, 20:16', 'Масштабный проект конца 2015 года, который открыл свои двери на территории бывшего лакокрасочного завода, а сейчас активно развивающегося арт-пространства за Москва-Сити. Он включает в себя 6 автономных залов с просторной welcome-зоной, вместимостью до 600 человек, а также открытую и закрытые веранды.')
@@ -132,7 +135,7 @@ mixin artist()
               +e.side-block
 
                 .sidebar-bordered-block
-                  .text-center
+                  .u-text-center
                     .heading-rate
                       span Рейтинг
                     .rate-number 4.2

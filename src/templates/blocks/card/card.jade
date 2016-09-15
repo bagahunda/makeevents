@@ -3,6 +3,7 @@ mixin card(name, role, price, link)
     a(href="{link}.html")
       +e.image
         img(src="https://unsplash.it/270/300?image=1025", alt="")
+<<<<<<< HEAD
       +e.info
         +e('span').title= name
         span= role
@@ -19,3 +20,22 @@ mixin card(name, role, price, link)
             i.fa.fa-star
           li.u-text-grey
             i.fa.fa-star
+=======
+    +e.info
+      +e('a href="artist-card.html"').title= name
+      span= role
+    +e.price.clearfix
+      span от #{price} ₽
+      ul.rating-stars
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li.u-text-grey
+          i.fa.fa-star
+
+>>>>>>> 399b884475cb2cab14c4eb8443c13a676eff156a

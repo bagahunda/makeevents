@@ -15,15 +15,16 @@ function onCardTabClicked(evt) {
 (function ($) {
 
   $(document).ready(function() {
+  if ($('.card-tabs li').length > 0) {
+	  $('.card-tabs li').click(onCardTabClicked);
 
-	$('.card-tabs li').click(onCardTabClicked);
-
-	//open first tab in tabs
-	try {
-		$('.card-tabs li')[0].click();
-	} catch(err) {
-		console.log('cannot open tab, ', err);
-	}
+  	//open first tab in tabs
+  	try {
+  		$('.card-tabs li')[0].click();
+  	} catch(err) {
+  		console.log('cannot open tab, ', err);
+  	}
+  }
 
   });
 
