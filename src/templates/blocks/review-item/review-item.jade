@@ -1,0 +1,22 @@
+
+mixin review-item(name, date, text)
+  +b.review-item.clearfix
+
+    +e(p).name= name
+
+    ul.rating-stars
+      li
+        i.fa.fa-star
+      li
+        i.fa.fa-star
+      li
+        i.fa.fa-star
+      li
+        i.fa.fa-star
+      li.u-text-grey
+        i.fa.fa-star
+
+    +e.date.grey-text= date
+
+    +e(p).text= text
+

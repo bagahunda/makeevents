@@ -1,0 +1,14 @@
+mixin program-item(name, role, price, duration, programHref)
+  +b('article').portfolio-card
+    +e.image
+      a(href="#")
+        img(src="https://unsplash.it/270/300?image=1025", alt="")
+    +e.info
+      +e('a href="#"').title= name
+      span= role
+    +e.price.clearfix
+      span.block-align-left от #{price} ₽
+      span.grey-text.block-align-right #{duration} минут
+      
+    +e.button-container
+      button.btn.btn--search(type="button").green-btn Забронировать

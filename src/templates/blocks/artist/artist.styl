@@ -1,0 +1,162 @@
+
+ul.card-tabs 
+  padding: 0
+  list-style-type: none
+  overflow: hidden
+  background-color: transparent
+  border-bottom: 1px solid text-color-grey;
+
+ul.card-tabs li 
+  display: inline-block;
+  padding: 10px 20px;
+  padding-left: 0px;
+
+  text-decoration: none
+  text-transform: uppercase
+  color: black
+  -webkit-transition: 0.3s
+  transition: 0.3s
+  cursor: pointer;
+
+
+ul.card-tabs li:focus,
+ul.card-tabs li:hover,
+ul.card-tabs li.active  
+  color: #4A90E2;
+
+.flex-block
+  display: flex
+
+.text-center 
+  text-align: center
+.content-title 
+  font-size: 1.25em;
+
+.card-tabs-content
+
+  &__text
+    flex: 1
+
+  &__side-block
+    width: 200px;
+
+
+.info-block {
+    border: solid 1px #ececec;
+    border-radius: 4px;
+    padding: 42px 30px 14px 30px;
+    margin-bottom: 40px;
+}
+
+/*rating block in left side*/
+.sidebar-bordered-block
+  padding: 20px;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 20px;
+  border: solid 1px #ececec;
+  border-radius: 4px;
+
+  .heading-rate 
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #6d6d72;
+    font-size: 0.929em;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-transform: uppercase;
+
+    span
+      padding: 5px 10px;
+      background: #fff;
+
+  .rate-number
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #000000;
+    font-size: 2.143em;
+    font-family: 'SFUIText', Helvetica, Arial, sans-serif;
+ 
+  .comment
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -10px;
+    a 
+      padding: 5px 10px;
+      text-decoration: none
+
+      background: #fff;
+      color: #4A90E2
+
+
+.reviews-button
+  padding-top: 30px;
+
+  a 
+    color: #4a90e2;
+    font-size: 1rem;
+    padding: 15px;
+    border: solid 1px #ececec;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none
+
+
+.program-grid
+  .card-grid__item
+    width 33.3333333%
+
+    @media screen and (max-width: 800px)
+      width 50%
+
+    @media screen and (max-width: 550px)
+      width 100%
+
+.artist-profile .photo-tiles 
+  width 350px
+
+.photo-tiles
+  margin: 0px;
+  height: 310px;
+  float right
+  padding: 0
+  list-style-type: none
+  overflow: hidden
+  background-color: transparent
+
+  li 
+    display: inline-block
+    width: 160px;
+    height: 100px;
+    overflow: hidden
+    position: relative
+
+    .overlay
+      background: rgba(0,0,0,0.8);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      .text
+        color: #fff;
+        font-size: 1rem;
+        display: inline-table;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+  img
+    width: 100%
