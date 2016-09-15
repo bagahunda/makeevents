@@ -25,6 +25,9 @@ lines-to-show = 2
   &:hover:after
     opacity 1
 
+  a
+    text-decoration none
+
   &__image
     height 173px
     overflow hidden
@@ -51,16 +54,11 @@ lines-to-show = 2
       overflow hidden
       text-overflow ellipsis
 
-  &__title
+  span.card__title
     display block
     margin 0.625em 0 0.31em
     font-size 1.25rem
     color text-color-base
-    text-decoration none
-    transition all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
-
-    &:hover
-      text-decoration underline
 
   &__price
     padding 0 0.93em 0.93em
