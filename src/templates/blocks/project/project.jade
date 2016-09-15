@@ -1,7 +1,5 @@
 include ../card-header/card-header
-include ../review-item/review-item
 include ../portfolio-item/portfolio-item
-include ../program-item/program-item
 
 mixin project()
   .container
@@ -13,31 +11,26 @@ mixin project()
         a(href="artist-card.html").u-blue-link Назад
         img(src="https://unsplash.it/700/300?image=1025", alt="").main-photo
 
-        +b.card-tabs-content
-          .tab-content#description-block
-            +e.text
-              .content-title.u-bold-text Старый Новый год в Нью-Дели
+        +e.text
+          .content-title.u-bold-text Старый Новый год в Нью-Дели
 
-              p 13 января 2016 года в Российском центре науки и культуры в Нью-Дели состоялось организованное представительством Россотрудничества совместно с Посольством России в Индии выступление московского музыкально коллектива «Стиляги Бэнд» и танцевального трио «Стильный Шейк», артисты которого являются лауреатами российских и международных джазовых фестивалей и конкурсов. Концерт стал первой культурной программой 2016 года и был посвящён православному Рождеству и Старому Новому году.
+          p 13 января 2016 года в Российском центре науки и культуры в Нью-Дели состоялось организованное представительством Россотрудничества совместно с Посольством России в Индии выступление московского музыкально коллектива «Стиляги Бэнд» и танцевального трио «Стильный Шейк», артисты которого являются лауреатами российских и международных джазовых фестивалей и конкурсов. Концерт стал первой культурной программой 2016 года и был посвящён православному Рождеству и Старому Новому году.
 
-              ul.project-photos-list
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+          ul.project-photos-list
+            li 
+              img(src="https://unsplash.it/270/300?image=1025", alt="")
+            li 
+              img(src="https://unsplash.it/270/300?image=1025", alt="")
+            li 
+              img(src="https://unsplash.it/270/300?image=1025", alt="")
+            li 
+              img(src="https://unsplash.it/270/300?image=1025", alt="")
+            li 
+              img(src="https://unsplash.it/270/300?image=1025", alt="")
 
-              .content-title Видео
-              +b('ul').portfolio-grid
-                +e('li').item
-                  +portfolio-item('Вечеринка1 танцы', "#", true)
-                +e('li').item
-                  +portfolio-item('Вечеринка2 песни', "#", true)
-
-
-             
+          .content-title Видео
+          +b('ul').portfolio-grid
+            +e('li').item
+              +portfolio-item('Вечеринка1 танцы', true)
+            +e('li').item
+              +portfolio-item('Вечеринка2 песни', true)

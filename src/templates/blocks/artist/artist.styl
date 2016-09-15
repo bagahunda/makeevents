@@ -30,11 +30,18 @@ ul.card-tabs li.active
 
 .card-tabs-content
 
-  &__text
-    flex: 1
+  .main-tabinfo-block
+    width: calc(100% - 310px);
+    display: inline-block;
+    word-break: break-word;
+
+    & p
+      word-break: break-word;
 
   &__side-block
-    width: 200px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
 
 
 .info-block {
@@ -156,3 +163,13 @@ ul.card-tabs li.active
 
   img
     width: 100%
+    min-height: 100%;
+
+.main-photo
+  max-width: 800px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+
+.artist-profile div, .artist-profile p, .artist-profile span, .artist-profile a
+  word-break: break-word;

@@ -1,0 +1,170 @@
+include ../card-header/card-header
+include ../portfolio-item/portfolio-item
+
+mixin program()
+  .container
+    +b('section').catalog.program-profile
+      +e.header.clearfix
+        +card-header('Максим Крицкий', 'Ведущий', '15000', 12, true)
+
+      +e.content.clearfix
+        a(href="artist-card.html").u-blue-link Список программ
+        .content-title.u-bold-text Старый Новый год в Нью-Дели
+        img(src="https://unsplash.it/700/300?image=1025", alt="").main-photo
+
+        ul.card-tabs
+          li#description.big-bold-text Описание
+          li#rider.big-bold-text Райдер
+
+        +b.card-tabs-content
+          .tab-content#description-block
+            +e.text
+              p 13 января 2016 года в Российском центре науки и культуры в Нью-Дели состоялось организованное представительством Россотрудничества совместно с Посольством России в Индии выступление московского музыкально коллектива «Стиляги Бэнд» и танцевального трио «Стильный Шейк», артисты которого являются лауреатами российских и международных джазовых фестивалей и конкурсов. Концерт стал первой культурной программой 2016 года и был посвящён православному Рождеству и Старому Новому году.
+
+              .content-title Параметры
+              .program-params
+                .u-text-grey Амплуа
+                div Музыкальные исполнители (кавер-группа), шоу и развлечения (танцевальные, театральные, шоу-программы, развлекательные)
+                .u-text-grey Жанры
+                div Дискотека, эстрада
+                .u-text-grey Доступные форматы
+                div Свадьба, корпоратив, концерт, дискотека, бал, день рождения
+
+              .content-title Фото
+              ul.project-photos-list
+                li 
+                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+                li 
+                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+                li 
+                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+                li 
+                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+                li 
+                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+
+              .content-title Видео
+              +b('ul').portfolio-grid
+                +e('li').item
+                  +portfolio-item('Вечеринка1 танцы', true)
+                +e('li').item
+                  +portfolio-item('Вечеринка2 песни', true)
+
+        +b.card-tabs-content
+          .tab-content#rider-block
+
+            .content-title P.A. System
+            .program-params
+              .u-text-grey Звуковое давление на FOH
+              div 100 dB
+            .content-title Сцена
+            .program-params
+              .u-text-grey Минимальные размеры
+              div 10м × 6м × 1.5м
+            .content-title Оборудование
+            .program-params
+              +b.equipment-table
+                +e.row
+                  +e.hcell Категория
+                  +e.hcell Модели или характеристики
+                  +e.hcell Количество
+                +e.row
+                  +e.cell
+                    .u-text-grey Световое оборудование / статические приборы / blinder
+                  +e.cell  Midas XL3, Midas XL4, Midas H3000, Soundcraft MH4, Soundcraft MH3
+                  +e.cell 1
+                +e.row
+                  +e.cell
+                    .u-text-grey Световое оборудование / статические приборы / blinder
+                  +e.cell Все модели из категории
+                  +e.cell 1
+                +e.row
+                  +e.cell
+                    .u-text-grey Световое оборудование / статические приборы / blinder
+                  +e.cell 
+                    p
+                      span.u-text-grey тип лампы: 
+                      span газоразрядная
+                    p
+                      span.u-text-grey  яркость: 
+                      span 5000-10000 Лм
+                    p
+                      span.u-text-grey производитель: 
+                      span L-Acoustic, Meyer Sound, JBL VerTec, Nexo, Adamson, Martin Audio
+                    p
+                      span.u-text-grey поддерживаемые форматы входного сигнала: 
+                      span 480i, 480p, 576i, 576p, 720p, 1080i, 1080p 
+                    p
+                      span.u-text-grey декодеры аудио: 
+                      span Dolby Digital
+                  +e.cell 1
+                +e.row
+                  +e.cell
+                    .u-text-grey Световое оборудование / статические приборы / blinder
+                  +e.cell 
+                    p
+                      span.u-text-grey тип лампы: 
+                      span газоразрядная
+                    p
+                      span.u-text-grey  яркость: 
+                      span 5000-10000 Лм
+                    p
+                      span.u-text-grey производитель: 
+                      span L-Acoustic, Meyer Sound, JBL VerTec, Nexo, Adamson, Martin Audio
+                    p
+                      span.u-text-grey поддерживаемые форматы входного сигнала: 
+                      span 480i, 480p, 576i, 576p, 720p, 1080i, 1080p 
+                    p
+                      span.u-text-grey декодеры аудио: 
+                      span Dolby Digital
+                  +e.cell 1
+                +e.or-row
+                  +e.row
+                    +e.cell
+                      .u-text-grey Световое оборудование / статические приборы / blinder
+                    +e.cell  Midas XL3, Midas XL4, Midas H3000, Soundcraft MH4, Soundcraft MH3
+                    +e.cell 1
+                +e.row
+                  +e.cell
+                    .u-text-grey Световое оборудование / статические приборы / blinder
+                  +e.cell Все модели из категории
+                  +e.cell 1
+
+            .content-title Документы
+            +b.attached-documents.program-params
+              +e.item 
+                  include ../sprite/icon-type-xls.svg
+                  a(href="#").u-blue-link Input list
+              +e.item 
+                  include ../sprite/icon-type-xls.svg
+                  a(href="#").u-blue-link Sound stage scheme
+
+
+            .content-title Дополнительно
+            .program-params
+              .u-text-grey Примечание к райдеру
+              div 
+                p Высокий, обязательно круглый, винтовой стул для барабанщика, в идеальном состоянии.
+                p Все пластики должны быть новыми, или в состоянии близком к новым.
+                p Один большой сценический вентилятор.
+                p Один запасной малый барабан, и запасная педаль (любого производителя, кроме TAMA)
+                p Барабаны должны быть установлены на невысокий(40-60 см) подиум, идеально ровный
+                p Обязательно положите коврик под установку, размер коврика должен быть достаточным, чтобы p на нем поместились все барабаны и стойки. Подиум должен быть3.5 х3.5 как минимум.
+
+
+
+        .section-title.big-bold-text Стоимость программы
+        +b.program-price-block
+          +e.cell
+            .u-text-grey Стоимость программы
+            div 500000 рублей
+          +e.cell
+            .u-text-grey Длительность программы
+            div 250 минут (4 часа 16 минут)
+
+
+
+        button.btn.btn--search(type="button").green-btn Забронировать
+
+
+             

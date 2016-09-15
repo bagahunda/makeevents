@@ -1,10 +1,10 @@
-mixin program-item(name, role, price, duration, programHref)
+mixin program-item(name, role, price, duration)
   +b('article').portfolio-card
     +e.image
-      a(href="#")
+      a(href="program-card.html")
         img(src="https://unsplash.it/270/300?image=1025", alt="")
     +e.info
-      +e('a href="#"').title= name
+      +e('a href="program-card.html"').title= name
       span= role
     +e.price.clearfix
       span.u-pull-left от #{price} ₽

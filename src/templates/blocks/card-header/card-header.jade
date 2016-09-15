@@ -1,4 +1,4 @@
-mixin card-header(name, role, price, reviews)
+mixin card-header(name, role, price, reviews, isGreenBtn)
   a(href="index.html").u-text-grey Вернуться к результатам поиска
   +b.card-header.clearfix
     +e.info
@@ -23,6 +23,8 @@ mixin card-header(name, role, price, reviews)
       .price-info
         span.big-bold-text от #{price} ₽
         span.u-text-grey за программу
-
-      button.btn.btn--search(type="button") Забронировать
+      if isGreenBtn == true
+        button.btn.btn--search(type="button").green-btn Забронировать
+      else
+        button.btn.btn--search(type="button") Забронировать
 
