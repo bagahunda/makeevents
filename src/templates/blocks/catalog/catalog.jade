@@ -1,5 +1,4 @@
 include ../card/card
-
 mixin catalog()
   .container
     +b('section').catalog
@@ -98,17 +97,17 @@ mixin catalog()
         .main-content
           +b('ul').card-grid
             +e('li').item
-              +card('Дуэт КП', 'Ведущий', '15000')
+              +card('Дуэт КП', 'Ведущий', '15000', 'artist-card')
             +e('li').item
-              +card('Вадим Ждан', 'Ведущий', '150000')
+              +card('Вадим Ждан', 'Ведущий', '150000', 'artist-card')
             +e('li').item
-              +card('Максим Крицкий', 'Ведущий', '15000')
+              +card('Максим Крицкий', 'Ведущий', '15000', 'artist-card')
             +e('li').item
-              +card('Артём Хворостухин', 'Ведущий, вокальный исполнитель', '15000')
+              +card('Артём Хворостухин', 'Ведущий, вокальный исполнитель', '15000', 'artist-card')
             +e('li').item
-              +card('Олег Белецкий', 'Ведущий', '15000')
+              +card('Олег Белецкий', 'Ведущий', '15000', 'artist-card')
             +e('li').item
-              +card('Елена Голуб', 'Шоу и развлечения', '15000')
+              +card('Елена Голуб', 'Шоу и развлечения', '15000', 'artist-card')
 
           +b.pagination.clearfix
             +e('ul').links

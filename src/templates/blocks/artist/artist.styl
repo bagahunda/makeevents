@@ -1,12 +1,12 @@
 
-ul.card-tabs 
+ul.card-tabs
   padding: 0
   list-style-type: none
   overflow: hidden
   background-color: transparent
-  border-bottom: 1px solid text-color-grey;
+  border-bottom: 1px solid #d8d8d8;
 
-ul.card-tabs li 
+ul.card-tabs li
   display: inline-block;
   padding: 10px 20px;
   padding-left: 0px;
@@ -21,15 +21,15 @@ ul.card-tabs li
 
 ul.card-tabs li:focus,
 ul.card-tabs li:hover,
-ul.card-tabs li.active  
+ul.card-tabs li.active
   color: #4A90E2;
 
 .flex-block
   display: flex
 
-.text-center 
+.text-center
   text-align: center
-.content-title 
+.content-title
   font-size: 1.25em;
 
 .card-tabs-content
@@ -57,7 +57,7 @@ ul.card-tabs li.active
   border: solid 1px #ececec;
   border-radius: 4px;
 
-  .heading-rate 
+  .heading-rate
     letter-spacing: -0.1px;
     text-align: center;
     color: #6d6d72;
@@ -80,14 +80,14 @@ ul.card-tabs li.active
     color: #000000;
     font-size: 2.143em;
     font-family: 'SFUIText', Helvetica, Arial, sans-serif;
- 
+
   .comment
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
     bottom: -10px;
-    a 
+    a
       padding: 5px 10px;
       text-decoration: none
 
@@ -98,7 +98,7 @@ ul.card-tabs li.active
 .reviews-button
   padding-top: 30px;
 
-  a 
+  a
     color: #4a90e2;
     font-size: 1rem;
     padding: 15px;
@@ -114,30 +114,40 @@ ul.card-tabs li.active
   .card-grid__item
     width 33.3333333%
 
-    @media screen and (max-width: 800px)
-      width 50%
+.catalog__hero-image
+  width 820px
+  height 310px
+  float left
+  overflow hidden
 
-    @media screen and (max-width: 550px)
-      width 100%
-
-.artist-profile .photo-tiles 
+.artist-profile .photo-tiles
   width 350px
 
 .photo-tiles
   margin: 0px;
   height: 310px;
   float right
-  padding: 0
+  padding: 0 0 0 5px
   list-style-type: none
   overflow: hidden
   background-color: transparent
+  // text-align justify
+  font-size 0
 
-  li 
+  li
     display: inline-block
-    width: 160px;
+    width: 170px;
     height: 100px;
+    margin-bottom 5px
     overflow: hidden
     position: relative
+
+    &:not(:nth-child(2n))
+      margin-right 5px
+
+    &:nth-child(5),
+    &:nth-child(6)
+      margin-bottom 0
 
     .overlay
       background: rgba(0,0,0,0.8);
@@ -160,3 +170,8 @@ ul.card-tabs li.active
 
   img
     width: 100%
+
+.tab-header
+  font-weight bold
+  color #000000
+  text-transform uppercase

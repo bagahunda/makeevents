@@ -8,42 +8,42 @@ mixin artist()
     +b('section').catalog.artist-profile
       +e.header.clearfix
         +card-header('Максим Крицкий', 'Ведущий', '15000', 12)
-        img(src="https://unsplash.it/700/300?image=1025", alt="")
+        +e.hero-image
+          img(src="https://unsplash.it/900/600?image=1025", alt="")
 
         ul.photo-tiles
-          li 
+          li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
-          li 
+          li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
-          li 
+          li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
-          li 
+          li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
-          li 
+          li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
-          li 
+          li
             img(src="https://unsplash.it/270/300?image=1025", alt="")
             .overlay.text-center
               .text +21 фото
 
       +e.content.clearfix
         ul.card-tabs
-          li#description.bold-text Описание
-          li#portfolio.bold-text Портфолио
-          li#program.bold-text Программа
-          li#reviews.bold-text Отзывы
+          li#description.tab-header Описание
+          li#portfolio.tab-header Портфолио
+          li#program.tab-header Программа
+          li#reviews.tab-header Отзывы
 
         +b.card-tabs-content
           .tab-content#description-block
             .flex-block
               +e.text
-                p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                p Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный. Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный.
+                p Серге́й Вячесла́вович Ла́зарев (1 апреля 1983, Москва, РСФСР, СССР) — российский певец, актёр театра, кино и озвучивания, телеведущий, бывший участник группы Smash!!. Представитель России на конкурсе песни «Евровидение-2016». Репертуар преимущественно англоязычный. Российский певец, актёр театра,
 
                 .content-title Репертуар
 
-                p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                p Песни из личного творчества, а также каверы на популярные песни иностранной поп-сцены. Песни из личного творчества, а также каверы на популярные песни иностранной поп-сцены.
 
               +e.side-block
 
@@ -113,10 +113,10 @@ mixin artist()
                 +program-item('Вечеринка5', 'Ведущий', '15000', 76, "#")
               +e('li').item
                 +program-item('Вечеринка6', 'Шоу и развлечения', '15000', 24, "#")
-              
+
 
           .tab-content#reviews-block
-            
+
             .flex-block
               +e.text
 
@@ -149,3 +149,5 @@ mixin artist()
                         i.fa.fa-star
                     .comment
                       a(href="#") 21 отзыв
+    +b.disclaimer.u-text-center
+      p Данные, использованные на сайте, включая стоимость билетов, а также расписание самолетов, поездов и электропоездов, взяты из официальных источников. Заказы ж/д билетов и авиабилетов, включая электронные жд билеты, оформляются партнерами Туту.ру. Стоимость указана с учетом сервисного сбора Туту.ру. Окончательную сумму можно увидеть на шаге подтверждения заказа. Ж/д, авиабилеты и туры найдены с помощью КТИС (Сколково).
