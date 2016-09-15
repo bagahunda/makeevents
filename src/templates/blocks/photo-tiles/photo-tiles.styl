@@ -1,7 +1,3 @@
-font-size = 14px
-line-height = 1.4
-lines-to-show = 2
-
 .card
   position relative
   box-shadow 0 1px 2px rgba(0,0,0,.15)
@@ -25,9 +21,6 @@ lines-to-show = 2
   &:hover:after
     opacity 1
 
-  a
-    text-decoration none
-
   &__image
     height 173px
     overflow hidden
@@ -41,24 +34,17 @@ lines-to-show = 2
     font-size 0.875em
     color text-color-grey
 
-    span
-      display block
-      display -webkit-box
-      max-width 400px
-      height font-size*line-height*lines-to-show
-      margin 0 auto
-      font-size font-size
-      line-height line-height
-      -webkit-line-clamp lines-to-show
-      -webkit-box-orient vertical
-      overflow hidden
-      text-overflow ellipsis
-
-  span.card__title
+  &__title
     display block
     margin 0.625em 0 0.31em
+    font-family heading-font
     font-size 1.25rem
     color text-color-base
+    text-decoration none
+    transition all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
+
+    &:hover
+      text-decoration underline
 
   &__price
     padding 0 0.93em 0.93em

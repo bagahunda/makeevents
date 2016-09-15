@@ -1,0 +1,28 @@
+mixin card-header(name, role, price, reviews)
+  a(href="index.html").grey-text Вернуться к результатам поиска
+  +b.card-header.clearfix
+    +e.info
+      h1= name
+
+      ul.rating-stars
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li.u-text-grey
+          i.fa.fa-star
+
+      a(href="#") #{reviews} отзывов
+      span.grey-text= role
+
+    +e.price.clearfix
+      .price-info
+        span.bold-text от #{price} ₽
+        span.grey-text за программу
+
+      button.btn.btn--search(type="button") Забронировать
+

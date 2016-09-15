@@ -1,0 +1,151 @@
+include ../card-header/card-header
+include ../review-item/review-item
+include ../portfolio-item/portfolio-item
+include ../program-item/program-item
+
+mixin artist()
+  .container
+    +b('section').catalog.artist-profile
+      +e.header.clearfix
+        +card-header('Максим Крицкий', 'Ведущий', '15000', 12)
+        img(src="https://unsplash.it/700/300?image=1025", alt="")
+
+        ul.photo-tiles
+          li 
+            img(src="https://unsplash.it/270/300?image=1025", alt="")
+          li 
+            img(src="https://unsplash.it/270/300?image=1025", alt="")
+          li 
+            img(src="https://unsplash.it/270/300?image=1025", alt="")
+          li 
+            img(src="https://unsplash.it/270/300?image=1025", alt="")
+          li 
+            img(src="https://unsplash.it/270/300?image=1025", alt="")
+          li 
+            img(src="https://unsplash.it/270/300?image=1025", alt="")
+            .overlay.text-center
+              .text +21 фото
+
+      +e.content.clearfix
+        ul.card-tabs
+          li#description.bold-text Описание
+          li#portfolio.bold-text Портфолио
+          li#program.bold-text Программа
+          li#reviews.bold-text Отзывы
+
+        +b.card-tabs-content
+          .tab-content#description-block
+            .flex-block
+              +e.text
+                p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+                .content-title Репертуар
+
+                p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+              +e.side-block
+
+                .sidebar-bordered-block
+                  .text-center
+                    .heading-rate
+                      span Жанры:
+                    p Поп-музыка
+                    p Мюзикл
+                    p Современная музыка
+                    p Рок
+
+                .sidebar-bordered-block
+                  .text-center
+                    .heading-rate
+                      span Рейтинг
+                    .rate-number 4.2
+                    ul.rating-stars
+                      li
+                        i.fa.fa-star
+                      li
+                        i.fa.fa-star
+                      li
+                        i.fa.fa-star
+                      li
+                        i.fa.fa-star
+                      li.u-text-grey
+                        i.fa.fa-star
+                    .comment
+                      a(href="#") 21 отзыв
+
+
+          .tab-content#portfolio-block
+            .content-title Выполненные проекты
+            +b('ul').portfolio-grid
+              +e('li').item
+                +portfolio-item('Вечеринка1', "#")
+              +e('li').item
+                +portfolio-item('Вечеринка2', "#")
+              +e('li').item
+                +portfolio-item('Вечеринка3', "#")
+              +e('li').item
+                +portfolio-item('Вечеринка4', "#")
+              +e('li').item
+                +portfolio-item('Вечеринка5', "#")
+              +e('li').item
+                +portfolio-item('Вечеринка6', "#")
+
+            .content-title Видео
+            +b('ul').portfolio-grid
+              +e('li').item
+                +portfolio-item('Вечеринка1 танцы', "#", true)
+              +e('li').item
+                +portfolio-item('Вечеринка2 песни', "#", true)
+
+          .tab-content#program-block
+            +b('ul').card-grid.program-grid
+              +e('li').item
+                +program-item('Вечеринка1', 'Ведущий', '15000', 245, "#")
+              +e('li').item
+                +program-item('Вечеринка2', 'Ведущий', '150000', 85, "#")
+              +e('li').item
+                +program-item('Вечеринка3', 'Ведущий', '15000', 45, "#")
+              +e('li').item
+                +program-item('Вечеринка4', 'Ведущий, вокальный исполнитель', '15000', 65, "#")
+              +e('li').item
+                +program-item('Вечеринка5', 'Ведущий', '15000', 76, "#")
+              +e('li').item
+                +program-item('Вечеринка6', 'Шоу и развлечения', '15000', 24, "#")
+              
+
+          .tab-content#reviews-block
+            
+            .flex-block
+              +e.text
+
+                +review-item('Amanda',  '10 апреля 2016, 20:16', 'Масштабный проект конца 2015 года, который открыл свои двери на территории бывшего лакокрасочного завода, а сейчас активно развивающегося арт-пространства за Москва-Сити. Он включает в себя 6 автономных залов с просторной welcome-зоной, вместимостью до 600 человек, а также открытую и закрытые веранды.')
+
+                +review-item('Vasya',  '10 апреля 2016, 20:16', 'Масштабный проект конца 2015 года, который открыл свои двери на территории бывшего лакокрасочного завода, а сейчас активно развивающегося арт-пространства за Москва-Сити. Он включает в себя 6 автономных залов с просторной welcome-зоной, вместимостью до 600 человек, а также открытую и закрытые веранды.')
+
+                +review-item('Petya',  '10 апреля 2016, 20:16', 'Масштабный проект конца 2015 года, который открыл свои двери на территории бывшего лакокрасочного завода, а сейчас активно развивающегося арт-пространства за Москва-Сити. Он включает в себя 6 автономных залов с просторной welcome-зоной, вместимостью до 600 человек, а также открытую и закрытые веранды.')
+
+                .reviews-button
+                  a(href="#").btn-more Показать еще
+
+              +e.side-block
+
+                .sidebar-bordered-block
+                  .text-center
+                    .heading-rate
+                      span Рейтинг
+                    .rate-number 4.2
+                    ul.rating-stars
+                      li
+                        i.fa.fa-star
+                      li
+                        i.fa.fa-star
+                      li
+                        i.fa.fa-star
+                      li
+                        i.fa.fa-star
+                      li.u-text-grey
+                        i.fa.fa-star
+                    .comment
+                      a(href="#") 21 отзыв
