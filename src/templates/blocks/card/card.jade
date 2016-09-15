@@ -1,0 +1,22 @@
+mixin card(name, role, price)
+  +b('article').card
+    a(href="#")
+      +e.image
+        img(src="https://unsplash.it/270/300?image=1025", alt="")
+    +e.info
+      +e('a href="artist-card.html"').title= name
+      span= role
+    +e.price.clearfix
+      span от #{price} ₽
+      ul.rating-stars
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li.u-text-grey
+          i.fa.fa-star
+
