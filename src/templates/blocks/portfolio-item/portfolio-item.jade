@@ -3,10 +3,10 @@ mixin portfolio-item(name, programHref, isVideo)
   
   +b('article').portfolio-card
     +e.image
-      a(href=programHref)
+      a(href="project-card.html")
         img(src="https://unsplash.it/270/300?image=1025", alt="")
       if isVideo == true
         include ../sprite/icon-play.svg
     +e.info
-      +e('a href=programHref').title= name
+      +e('a href="project-card.html"').title= name
       span= role
