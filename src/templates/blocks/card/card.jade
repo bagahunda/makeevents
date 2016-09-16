@@ -5,7 +5,7 @@ mixin card(name, role, price, link)
         img(src="https://unsplash.it/270/300?image=1025", alt="")
       +e.info
         +e('span').title= name
-        span= role
+        span.role= role
       +e.price.clearfix
         span от #{price} ₽
         +e('ul').rating
