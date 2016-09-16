@@ -1,12 +1,13 @@
 font-size = 14px
 line-height = 1.4
-lines-to-show = 2
+lines-to-show = 1
 
 .card
   position relative
   box-shadow 0 1px 2px rgba(0,0,0,.15)
   transition all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
   z-index 1
+  height: 270px;
 
   &:after
     content ""
@@ -34,7 +35,7 @@ lines-to-show = 2
 
   &__info
     padding 0 0.93em 0
-    margin-bottom 0.687em
+    margin-bottom 0.387em
     font-size 0.875em
     color text-color-grey
 
@@ -53,7 +54,8 @@ lines-to-show = 2
 
   span.card__title
     display block
-    margin 0.625em 0 0.31em
+    height 20px*line-height*lines-to-show
+    margin 0.425em 0 0.31em
     font-size 1.25rem
     color text-color-base
 
@@ -73,3 +75,12 @@ lines-to-show = 2
 
     li
       display inline-block
+
+.rating-stars
+  margin 0
+  padding 0
+  list-style none
+  color #F3A536
+
+  li
+    display inline-block

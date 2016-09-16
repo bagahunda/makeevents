@@ -5,7 +5,7 @@ mixin program-item(name, role, price, duration)
         img(src="https://unsplash.it/270/300?image=1025", alt="")
     +e.info
       +e('a href="program-card.html"').title= name
-      span= role
+      span.artist-role= role
     +e.price.clearfix
       span.u-pull-left от #{price} ₽
       span.u-text-grey.u-pull-right #{duration} минут
