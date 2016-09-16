@@ -31,17 +31,22 @@ mixin program()
                 div Свадьба, корпоратив, концерт, дискотека, бал, день рождения
 
               .content-title Фото
-              ul.project-photos-list
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
-                li 
-                  img(src="https://unsplash.it/270/300?image=1025", alt="")
+
+              +b('ul').portfolio-grid
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
+                +e('li').item
+                  img(src="https://unsplash.it/270/150?image=1025", alt="")
 
               .content-title Видео
               +b('ul').portfolio-grid
