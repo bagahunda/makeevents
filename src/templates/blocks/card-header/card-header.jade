@@ -24,7 +24,7 @@ mixin card-header(name, role, price, reviews, isGreenBtn)
         span.big-bold-text от #{price} ₽
         span.u-text-grey за программу
       if isGreenBtn == true
-        button.btn.btn--search(type="button").green-btn Забронировать
+        button.btn.btn--search(type="button").reserve-btn.green-btn Забронировать
       else
-        button.btn.btn--search(type="button") Забронировать
+        button.btn.btn--search(type="button").reserve-btn Забронировать
 

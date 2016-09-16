@@ -13,8 +13,8 @@ mixin program()
         img(src="https://unsplash.it/700/300?image=1025", alt="").main-photo
 
         ul.card-tabs
-          li#description.big-bold-text Описание
-          li#rider.big-bold-text Райдер
+          li#description.tab-header Описание
+          li#rider.tab-header Райдер
 
         +b.card-tabs-content
           .tab-content#description-block
@@ -153,7 +153,7 @@ mixin program()
 
 
 
-        .section-title.big-bold-text Стоимость программы
+        .section-title.tab-header Стоимость программы
         +b.program-price-block
           +e.cell
             .u-text-grey Стоимость программы
@@ -164,7 +164,7 @@ mixin program()
 
 
 
-        button.btn.btn--search(type="button").green-btn Забронировать
+        button.btn.btn--search(type="button").reserve-btn.green-btn Забронировать
 
 
              
