@@ -1,51 +1,59 @@
 mixin footer()
   +b.footer&attributes(attributes)
-    .container
-      +e.links.clearfix
-        +e.menu
-          ul
-            li
-              +e('a')(href="#").link-item О компании
-            li
-              +e('a')(href="#").link-item Партнерская программа
-            li
-              +e('a')(href="#").link-item Реклама
-            li
-              +e('a')(href="#").link-item Вакансии
-            li
-              +e('a')(href="#").link-item Помощь
+      .disclaimer.container.u-text-center
+        p Данные, использованные на сайте, включая стоимость билетов, а также расписание самолетов, поездов и электропоездов, взяты из официальных источников. Заказы ж/д билетов и авиабилетов, включая электронные жд билеты, оформляются партнерами Туту.ру. Стоимость указана с учетом сервисного сбора Туту.ру. Окончательную сумму можно увидеть на шаге подтверждения заказа. Ж/д, авиабилеты и туры найдены с помощью КТИС (Сколково).
+      .footer-bottom
+        .container.clearfix
 
-          ul
-            li
-              +e('a')(href="#").link-item
-                <i class="fa fa-vk" aria-hidden="true"></i>
-                | Вконтакте
-            li
-              +e('a')(href="#").link-item
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                | Фейсбук
-            li
-              +e('a')(href="#").link-item
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                | Твиттер
-            li
-              +e('a')(href="#").link-item
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                | Инстаграм
+          +e('table').links
+            tr
+              td
+                +e.block-title Партнеру
+                +e('a')(href="#").block-items Вход для партнеров
+                +e('a')(href="#").block-items Артисту
+                +e('a')(href="#").block-items Площадке
+                
+              td
+                +e.block-title Компания
+                +e('a')(href="#").block-items О компании
+                +e('a')(href="#").block-items Поддержка
+                
+              td
+                +e.block-title Поддержка
+                +e('a')(href="#").block-items Правила работы
+                +e('a')(href="#").block-items Конфиденциальность
+                +e('a')(href="#").block-items Вопросы и ответы
 
-          .lang
-            select#lang(name="lang")
-              option(value="ru") Русский
-              option(value="en") English
 
-        +e.apps.u-text-right
-          a.app-store-link(href="#")
-            img(src="assets/images/appstore.png" height="37" alt="")
-            //- svg.icon(width="125")
-            //-   use(xlink:href="#appstore")
-          a.google-play-link(href="#")
-            img(src="assets/images/googleplay.png" height="37" alt="")
+          +e.contacts
+            ul.contacts-info
+              li  
+                .svg-container
+                  include ../sprite/icon-phone.svg
+                | +7 800 200-75-71
+              li <i class="fa fa-envelope" aria-hidden="true"></i>
+                | hello@make.events
 
-          +e.copy.u-text-right
-            | © 2016, make.events — создание мероприятий без посредников
+            +e.welcome-text
+              Присоединяйтесь к нам
+            ul.network-links
+              li
+                +e('a')(href="#").link-item
+                  <i class="fa fa-vk" aria-hidden="true"></i>
+              li
+                +e('a')(href="#").link-item
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+              li
+                +e('a')(href="#").link-item
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+              li
+                +e('a')(href="#").link-item
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+
+        +e.bordered-container.container
+
+          .svg-container
+              include ../sprite/grey-logo.svg
+          span= 2016
+
 

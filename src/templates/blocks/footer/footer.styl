@@ -1,43 +1,101 @@
 .footer
-  padding-top 2.5em
-  background-color #ffffff
-  height 187px
+  width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #000000;
 
-  &__menu
-    width 60%
-    float left
-    ul
-      padding 0
-      margin 0
-      list-style none
+  a:link
+    text-decoration: none;
 
-      li
-        display inline-block
+  ul li 
+    list-style: none
+    list-style-type: none;
 
-        &:not(:last-child)
-          margin-right 1.875em
+
+
+  &__links
+    float: left
+
+    td
+      vertical-align: top
+      padding-right: 40px;
+      padding-right: 40px;
+
+  &__block-title
+    font-size: 16px;
+    font-weight: bold;
+    color: #434343;
+    text-transform: uppercase
+    padding-bottom: 20px;
+
+  &__block-items
+    display: block;
+    line-height: 1.71;
+    color: #000000;
+
+  &__contacts {
+    float: right;
+    margin-right: 20px;
+  }
+
+  ul.network-links
+    padding 0
+    margin 0
+
+    li
+      display inline-block
+
+      &:not(:last-child)
+        margin-right 5px
 
     ul + ul
       margin-top 0.93em
 
   &__link-item
     font-size 0.875em
-    color text-color-grey
-    text-decoration none
+    color: #434343;
 
-  &__apps
-    width 40%
-    float right
+  &__welcome-text
+    opacity: 0.5;
 
-  &__copy
-    margin-top 2.5em
-    font-size 0.875em
+  &__bordered-container
+    border-top: 1px solid #e8e8e8;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    span
+      opacity: 0.5;
+
+  .contacts-info
+    padding: 0;
+    margin-bottom: 20px;
+
+  .contacts-info li
+    padding: 0;
+    font-size: 16px;
+
+  .svg-container
+    display: inline-block;
+    padding-right: 5px
 
   .fa
-    color #5a5a5a
+    margin-right: 5px
 
-.app-store-link
-  margin-right 0.625em
 
-.lang
-  margin-top 1.25em
+
+
+.wrapper:after {
+    height: 0px;
+}
+.wrapper {
+    min-height: calc(100vh - 323px);
+    margin-bottom: 0px;
+}
+.footer .footer-bottom{
+    padding-top: 2.5em;
+    background-color: #fff;
+    width: 100%;
+}

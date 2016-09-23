@@ -11,7 +11,6 @@
 
   &__item
     margin-bottom 1.875em
-    width 25%
     font-family base-font /* be sure to reset the font and letter-spacing */
     letter-spacing normal
     display inline-block
@@ -20,16 +19,13 @@
     position relative
     float none
     text-align left
-    vertical-align top /* align row's columns top or baseline 
+    vertical-align top 
 
-    @media screen and (max-width: 1200px)
-      width 33.3333333%
-
-    @media screen and (max-width: 850px)
-      width 50%
-
-    @media screen and (max-width: 600px)
-      width 100%*/
+    img 
+      width: 270px;
+      height: 150px;
+      margin-bottom: 5px;
+      overflow: hidden;
 
 
 .portfolio-card
@@ -62,7 +58,7 @@
 
     img 
       width: 100%
-      min-height: 100%;
+      height: 100%;
 
     a
       display block

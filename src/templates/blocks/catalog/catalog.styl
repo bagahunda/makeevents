@@ -38,6 +38,8 @@
       margin-bottom 0.625em
       font-size 0.81rem
       opacity 0.6
+      position: relative
+      z-index: 1
 
   &__items-filters
     margin 0.625em 0 1.31em
@@ -189,6 +191,9 @@ aside
 .form-group:not(:first-child)
   margin-top 1.25em
 
+.form-group
+  position: relative
+
 .main-content
   width calc(75% - 30px)
   float right
@@ -259,7 +264,7 @@ aside
     margin-right 1.25em
 
 .disclaimer
-  padding 2.142em 0 2.857em
+  padding: 2.142em 0 1.5em;
   font-size 0.875rem
   color text-color-grey
 
