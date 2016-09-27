@@ -8,6 +8,9 @@
   &__header
     margin-bottom 1.875em
 
+  &__content
+    position: relative
+
   &__title
     float left
 
@@ -62,8 +65,8 @@
     cursor pointer
 
     &:before
-      width 6px
-      height 6px
+      width 9px
+      height 9px
       margin-top -7px
       position absolute
       left 0
@@ -73,8 +76,19 @@
       transform rotate(-135deg)
       content ''
 
+
+  ul
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 16px;
+
+    li
+      list-style-type: none;
+
 .filter-opened:before
   transform rotate(45deg)
+  margin-top: -4px;
 
 .inner-filter
   margin 1.25em 0 0
@@ -87,6 +101,26 @@
 
     &:not(:last-child)
       margin-bottom 1.07em
+
+
+.inline-group{
+  display: table;
+  width: 100%;
+}
+
+.inline-group *{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inline-group p:last-child{
+  padding-left: 10px;
+}
+
+input[type='number']:invalid {
+  border: 1px solid #F7395D;
+  background-color: #FFEEEE;
+}
 
 input[type="checkbox"]
   display none
@@ -230,14 +264,15 @@ aside
   text-decoration none
 
 .pagination
-  display table
-  width 100%
-  vertical-align middle
+  position: absolute;
+  bottom: 0px;    
+  width: calc(75% - 30px);
 
   &__links
     display inline-block
     margin 0
     padding 0
+    float: left
     font-size 0
     list-style none
     border-radius 3px
@@ -257,11 +292,38 @@ aside
     text-decoration none
     color text-color-base
 
+  &__item:hover,
+  &__item:focus,
+  &__item.focus,
+  &__item:active,
+  &__item.active 
+    color: #333333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  
+  &__item.disabled
+    color: #cccccc;
+    cursor: auto;
+  
+  &__item.disabled:hover,
+  &__item.disabled:focus,
+  &__item.disabled:active
+    color: #cccccc;
+    background-color: white;    
+    border-color: #d2d3d5;
+  
 .items-qty
-  display table-cell
+  padding-left: 10px;
+  list-style: initial;
 
   span
     margin-right 1.25em
+
+  select{
+    padding: 0.625em 0.4em;
+    border: solid 1px #d2d3d5;
+    outline: none;
+  }
 
 .disclaimer
   padding: 2.142em 0 1.5em;
@@ -270,3 +332,7 @@ aside
 
 
 
+
+.reset-filter, .pagination__item, .btn-more {
+  cursor: pointer;
+}
