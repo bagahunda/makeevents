@@ -1,6 +1,7 @@
 
 ul.card-tabs
   padding: 0
+  margin-bottom: 20px;
   list-style-type: none
   overflow: hidden
   background-color: transparent
@@ -33,7 +34,13 @@ ul.card-tabs li.active
   display: block
 
 .content-title
-  font-size: 1.25em;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.4px;
+
+.with-indent {
+  margin: 20px 0;
+}
 
 .card-tabs-content
 
@@ -62,8 +69,8 @@ ul.card-tabs li.active
 .sidebar-bordered-block
   padding: 20px;
   position: relative;
-  margin-top: 50px;
-  margin-left: 20px;
+  margin-top: 11px;
+  margin-left: 30px;
   border: solid 1px #ececec;
   border-radius: 4px;
 
@@ -71,7 +78,7 @@ ul.card-tabs li.active
     letter-spacing: -0.1px;
     text-align: center;
     color: #6d6d72;
-    font-size: 0.929em;
+    font-size: 13px;
     position: absolute;
     top: -10px;
     left: 0;
@@ -100,10 +107,16 @@ ul.card-tabs li.active
     a
       padding: 5px 10px;
       text-decoration: none
+      font-size: 13px;
+      letter-spacing: -0.1px;
 
       background: #fff;
       color: #4A90E2
 
+
+.sidebar-bordered-block:not(:first-child) {
+  margin-top: 30px;
+}
 
 .reviews-button
   padding-top: 30px;

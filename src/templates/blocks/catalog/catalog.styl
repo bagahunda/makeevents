@@ -1,12 +1,13 @@
 .catalog
   padding 1.875em 1.875em 3.75em
-  margin-top 1.875em
+  margin-top 30px
   border-radius 3px
   background-color #fdfdfd
   box-shadow 0 0.625em 1.875em 0 rgba(0, 0, 0, 0.1)
 
   &__header
-    margin-bottom 1.875em
+    font-size: 14px;
+    margin-bottom 47px
 
   &__content
     position: relative
@@ -17,6 +18,10 @@
     h1
       margin 0
       text-transform uppercase
+      height: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 0.83;
 
   &__search
     position relative
@@ -53,14 +58,14 @@
     list-style none
 
 .item-filter
-  padding 1.06em
+  padding 17px
 
   &:not(:last-child)
     border-bottom solid 1px #efefef
 
   &__name
     position relative
-    padding-left 1.43em
+    padding-left 25px
     font-size 0.875em
     cursor pointer
 
@@ -219,7 +224,7 @@ input[type="radio"]
     margin-bottom 1.07em
 
 aside
-  width 25%
+  width 270px;
   float left
 
 .form-group:not(:first-child)
@@ -229,7 +234,7 @@ aside
   position: relative
 
 .main-content
-  width calc(75% - 30px)
+  width calc(100% - 300px)
   float right
 
 .card-grid
@@ -249,8 +254,8 @@ aside
     font-family base-font /* be sure to reset the font and letter-spacing */
     letter-spacing normal
     display inline-block
-    padding-left 0.93em
-    padding-right 0.93em
+    padding-left 14px
+    padding-right 14px
     position relative
     float none
     text-align left
@@ -266,7 +271,7 @@ aside
 .pagination
   position: absolute;
   bottom: 0px;    
-  width: calc(75% - 30px);
+  width: calc(100% - 300px);
 
   &__links
     display inline-block

@@ -13,15 +13,18 @@
   width 175px
 
 .content-tables
-  margin-bottom 60px
+  margin-bottom 20px
 
 .content-title--bordered
   padding-bottom 18px
   border-bottom 1px solid #d8d8d8
+  margin-bottom: 30px;
 
 .char-table
   width 50%
   float left
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 
   & + &
     width calc(50% - 30px)
@@ -30,7 +33,7 @@
   td
     width 50%
     padding 20px 0
-    border-bottom 1px solid #ebebeb
+    border-top 1px solid #ebebeb
     vertical-align: top;
 
     &:nth-child(2)
@@ -39,7 +42,7 @@
   .inner-row
     td
       border none
-      padding 10px 0
+      padding 8px 0
 
       &:nth-child(2)
         padding-left 30px
@@ -48,10 +51,11 @@
   display block
   font-size 14px
   color text-color-grey
+  margin-top: 30px;
 
 #eq-block
   .content-title
-    margin 30px 0
+    margin 28px 0
 
   .eq-table + .content-title
     margin-top 65px
@@ -69,5 +73,8 @@
   td
     padding 15px 0
     border-bottom 1px solid #d2d3d5
+
+  tr td:first-child
+    width: 70%;
 
 
